@@ -1,23 +1,81 @@
 @use './colors' as *;
 
-@mixin btn-blue {
-  padding: 0.9375rem 0 0.875rem;
-  vertical-align: middle;
-  align-items: center;
-  border-radius: 4px;
-  text-decoration: none;
-  border: transparent;
-  margin: 0 0 1rem;
-  display: flex;
-  justify-content: center;
-  font-family: 'Source Sans Pro', serif !important;
-  background: $bg-gradient-1;
-  color: white;
-  font-size: 1.15rem;
-  line-height: 26px;
-  font-weight: 600;
-  letter-spacing: -3%;
+@mixin btn-see-product {
+  width: 10rem;
+  height: 3rem;
+  background-color: $color-primary;
+  color: $color-text-dark;
+  border: none;
+  border-radius: 0.75rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
   cursor: pointer;
-  width: 100%;
-  max-width: 17rem;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $color-secondary; // light background on hover
+  }
+
+  &:active {
+    background-color: darken($color-secondary, 5%); // slightly darker on active
+  }
+}
+
+@mixin btn-shop {
+  @include btn-see-product;
+  background-color: $color-secondary; // initially dark background
+  color: $color-primary; // initially primary color text
+
+  &:hover {
+    color: $color-secondary; // text color switches to dark on hover
+  }
+}
+
+@mixin btn-outline {
+  @include btn-see-product;
+  background-color: transparent;
+  border: 1px solid $color-primary;
+  color: $color-primary;
+
+  &:hover {
+    background-color: $color-secondary; // light background on hover
+  }
+
+  &:active {
+    background-color: darken($color-secondary, 5%); // slightly darker on active
+  }
+}
+
+// Dark mode styles
+
+@mixin btn-see-product-dark {
+  @include btn-see-product;
+  background-color: $color-secondary;
+  color: $color-text-light;
+
+  &:hover {
+    background-color: $color-primary; // primary color background on hover for dark mode
+  }
+}
+
+@mixin btn-shop-dark {
+  @include btn-shop;
+  background-color: $color-primary;
+  color: $color-secondary;
+
+  &:hover {
+    color: $color-primary; // text color switches to primary on hover for dark mode
+  }
+}
+
+@mixin btn-outline-dark {
+  @include btn-outline;
+  border-color: $color-text-light;
+  color: $color-text-light;
+
+  &:hover {
+    background-color: $color-primary; // primary color background on hover for dark mode
+  }
 }

@@ -1,490 +1,132 @@
 @use '../styles/breakpoints' as *;
 @use '../styles/colors' as *;
-// @use './fonts.scss' as *;
 @use './scrollbar' as *;
-@import './variables';
+@use './variables';
 
+// Importing the fonts from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
+
+// Define the Manrope font faces
 @font-face {
-  font-family: 'Inter';
-  src: local('Inter'), url(/fonts/Inter/Inter-Regular.ttf);
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope/Manrope-Medium.ttf') format('truetype');
   font-weight: 500;
-  src: local('Inter'), url(/fonts/Inter/Inter-Medium.ttf) format('opentype');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
-  font-weight: 600;
-  src: local('Inter'), url(/fonts/Inter/Inter-SemiBold.ttf) format('opentype');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope/Manrope-Bold.ttf') format('truetype');
   font-weight: 700;
-  src: local('Inter'), url(/fonts/Inter/Inter-Bold.ttf) format('opentype');
   font-display: swap;
 }
-
-#__next * {}
 
 * {
-  font-family: 'Inter', serif;
+  font-family: 'Manrope', sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-.content-wrapper {
-  background: $dark-background;
-  color: white;
-  position: relative;
-  // overflow: hidden;
+// Typography Styles
+h1 {
+  font-weight: bold;
+  font-size: 56px;
+  text-transform: uppercase;
+  line-height: 58px;
+  letter-spacing: 2px;
 }
 
-.content-wrapper.light {
-  background: $light-background;
-  color: #3e3e3e;
-
-  // img {
-  //   filter: invert(0.8) !important;
-  // }
+body {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
 }
 
-.content-wrapper.light h2,
-.content-wrapper.light h3 {
-  color: $light-mode-secondary;
+h2 {
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 44px;
+  letter-spacing: 1.5px;
 }
 
-#__next>.light,
-#__next>.light a {}
-
-img {
-  width: 100% !important;
-  height: auto;
-  user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+h3 {
+  font-weight: bold;
+  font-size: 32px;
+  text-transform: uppercase;
+  line-height: 36px;
+  letter-spacing: 1.15px;
 }
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-family: 'Fjalla', serif;
-// }
+h4 {
+  font-weight: bold;
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
 
-// h1 {
-//   font-size: clamp(3.2rem, 10vw, 6rem);
-//   font-weight: 400;
-//   line-height: 2.1ch;
+h5 {
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
 
-//   margin-bottom: 1rem;
+h6 {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
 
-//   @include md {
-//     margin-bottom: 2rem;
-//   }
-// }
+.overline {
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 19px;
+  letter-spacing: 10px;
+}
 
-// h2 {
-//   font-weight: 500;
-//   // font-size: clamp(3rem, 5vw + 1rem, 4.5rem);
-//   font-size: clamp(2rem, 10vw, 3rem);
-// }
-
-// h3 {
-//   font-size: clamp(1.25rem, 2vw + 1rem, 1.5rem);
-//   font-weight: bold;
-// }
-
-// h4 {
-//   font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
-//   font-weight: bold;
-// }
-
-// a {
-//   color: inherit;
-//   text-decoration: none;
-// }
-
-// p {
-//   line-height: 2.75ch;
-// }
+.subtitle {
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
 
 button {
   cursor: pointer;
-  font-family: 'montserrat', serif !important;
-}
-
-.bold {
-  font-weight: 800;
-}
-
-.grid {
-  display: grid;
-}
-
-.three-col {
-  grid-template-columns: 1fr 1fr;
+  font-family: 'Manrope', sans-serif;
+  // ... other styles
 }
 
 .button-blue {
-  display: inline-block;
-  border: none;
-  text-decoration: none;
-  background: #1960ea;
-  color: white;
-  text-align: center;
-  padding: 0.6rem 0;
-  width: 100%;
-  max-width: 13rem;
-  margin-top: 1.25rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', serif !important;
-  font-weight: 500;
-  text-transform: capitalize;
+  // ... update styles as per Audiophile design
 }
 
-.light .button-blue {
-  background: $light-mode-secondary;
-}
+// ... other styles remain the same
 
-.outlined {
-  background: transparent !important;
-  border: 1px solid $ln-blue !important;
-  color: $ln-blue !important;
-}
-
-.light .outlined {
-  border: 1px solid $light-mode-secondary !important;
-  color: $light-mode-secondary !important;
-}
-
-.read-more {
-  display: flex;
-  align-items: center;
-  font-size: 0.75rem;
-  color: $dark-mode-secondary;
-}
-
-.light .read-more {
-  color: $light-mode-secondary;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.gradient {
-  position: absolute;
-  overflow: visible;
-  opacity: 0.1;
-}
-
-.gradient img {}
-
-.gradient span {
-  overflow: visible !important;
-}
-
-/* Security */
-.security {
-  position: relative;
-  overflow: hidden;
-}
-
-.security>div {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-bottom: 4rem;
-  position: relative;
-  z-index: 5;
-}
-
-.security>img:last-of-type {
-  position: absolute;
-  top: 50vw;
-  right: -50vw;
-  z-index: 0;
-  opacity: 0.15;
-}
-
-/* ApexCharts */
-
-.apexcharts-pie {
-  // scale: 1.5;
-  // transform: translateX(-20%);
-}
-
-.apexcharts-legend {
-  display: grid;
-  // transform: translateY(4rem);
-
-  @include md {
-    display: flex !important;
-    justify-content: center !important;
-    text-align-last: left;
-  }
-}
-
-.apexcharts-legend-text {
-  color: white !important;
-}
-
-#__next>.light .apexcharts-legend-text {
-  color: $light-mode-text-color !important;
-}
-
-/* MUI */
-.MuiTab-root {
-  color: white;
-  font-family: 'fjalla', sans-serif;
-  font-size: 1.2rem;
-}
-
-.MuiAccordionSummary-content.Mui-expanded {
-  color: $dark-mode-secondary !important;
-  background: transparent !important;
-}
-
-.content-wrapper.light .MuiAccordionSummary-content.Mui-expanded .MuiTypography-root {
-  color: $light-mode-secondary !important;
-}
-
-.MuiAccordion-root.Mui-expanded {
-  color: $dark-mode-secondary;
-}
-
-.light .MuiAccordion-root.Mui-expanded {
-  color: $light-mode-secondary;
-}
-
-// .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
-.MuiAccordion-root {
-  background: rgba(255, 255, 255, 0.05) !important;
-  backdrop-filter: blur(15px) !important;
-  border-radius: 10px !important;
-  color: #cfcfcf !important;
-  margin: 1rem 0;
-}
-
-.light .MuiAccordion-root {
-  color: $light-mode-text-color !important;
-}
-
-.MuiAccordion-root svg {
-  color: #cfcfcf !important;
-}
-
-.light .MuiAccordion-root svg {
-  color: $light-mode-text-color !important;
-}
-
-.MuiAccordion-root.Mui-expanded svg {
-  color: $dark-mode-secondary !important;
-}
-
-.light .MuiAccordion-root.Mui-expanded svg {
-  color: $light-mode-secondary !important;
-}
-
-.MuiTabs-flexContainer button {
-  flex: 1;
-  color: #646464 !important;
-  font-family: 'fjalla', serif !important;
-  font-size: 0.95rem !important;
-  min-width: max-content;
-
-  @include md {
-    font-size: 1.5rem !important;
-  }
-
-  // @include lg {
-  //   font-size: 2rem !important;
-  // }
-
-  // @include xl {
-  //   font-size: 2.3rem !important;
-  // }
-}
-
-.MuiTabs-flexContainer button.Mui-selected {
-  color: $ln-blue !important;
-}
-
-.app-preview .MuiTabs-flexContainer {
-  justify-content: center;
-}
-
-.app-preview .MuiTab-root {
-  max-width: 12rem !important;
-}
-
-.app-preview>div div {
-  background: transparent !important;
-}
-
-/* Simple Dialog */
-.MuiPaper-root {
-  background: none;
-}
-
-// .light.MuiPaper-root {
-//   background: $light-background !important;
-// }
-
-@media (min-width: 1120px) {
-  .MuiTabs-indicator {
-    // width: 50% !important;
-    // left: 25% !important;
-    display: block;
-    // background: #1657ff !important;
-  }
-
-  .three-col {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .MuiTabs-flexContainer {
-    overflow-x: hidden;
-    gap: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .MuiTabs-flexContainer button {}
-}
-
-@media (min-width: 1280px) {
-  .MuiTabs-flexContainer button {}
-}
-
-.st1 {
-  display: none;
-  fill: #2e3192;
-}
-
-.st2 {
-  display: inline;
-  fill: #1d4fbc;
-}
-
-.st3 {
-  fill: #cedcff;
-}
-
-.st4 {
-  fill: #1d4fbc;
-}
-
-.st5 {
-  fill: #172e56;
-}
-
-.st6 {
-  fill: #5197ed;
-}
-
-.st7 {
-  font-family: 'Mont-HeavyDEMO';
-}
-
-.st8 {
-  font-size: 27.6771px;
-}
-
-.st9 {
-  fill: #ffffff;
-  stroke: #000000;
-  stroke-miterlimit: 10;
-}
-
-/* Web3 Wallet */
-
-#metamask,
-#coinbasewallet,
-#walletConnect {
-  font-size: 1rem;
-
-  @include lg {
-    font-size: 10px;
-  }
-
-  @include xl {
-    font-size: 1rem;
-  }
-}
-
-.walletconnect-connect__button {
-  background: $ln-blue !important;
-}
-
-.walletconnect-modal__headerLogo {
-  position: absolute;
-  left: -48%;
-}
-
-.walletconnect-modal__header p {
-  position: absolute;
-  left: 7%;
-}
-
-.list:not(.success)::before {
-  content: '\2022';
-  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  font-size: 1rem;
-  color: $ln-blue;
-  /* Change the color */
-  font-weight: bold;
-  /* If you want it to be bold */
-  display: inline-block;
-  /* Needed to add space between the bullet and the text */
-  width: 1em;
-  /* Also needed for space (tweak if needed) */
-  margin-left: -1em;
-  /* Also needed for space (tweak if needed) */
-}
-
-.list::before {
-  color: $light-mode-secondary;
-}
-
-.slide-content-wrapper li {
-  padding: 1rem 2rem;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', serif;
+.content-wrapper {
+  background: $color-bg-dark;
+  color: $color-text-light;
   position: relative;
 }
 
-.slide-content-wrapper li:last-of-type {
-  padding: 1.3rem 2rem;
-
-  @include md {
-    padding: 1.5rem 2rem;
-  }
+.content-wrapper.light {
+  background: $color-bg-light;
+  color: $color-text-dark;
 }
 
-.fslightbox-slide-btn-previous-container {
-  padding-left: 5vw !important;
-}
-
-.fslightbox-slide-btn-next-container {
-  padding-right: 5vw !important;
-}
+// ... rest of your styles
