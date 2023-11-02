@@ -1,0 +1,31 @@
+/* For Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #101828;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2970ff;
+  border-radius: 4px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-color: #2970ff #101828;
+  scrollbar-width: thin;
+}
+
+/* auto hiding scrollbars in IE/Edge */
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.scrollbar-container {
+  position: relative;
+  overflow-y: scroll;
+  height: 100vh;
+}
