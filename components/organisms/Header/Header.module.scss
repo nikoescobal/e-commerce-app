@@ -1,0 +1,37 @@
+// components/Header/Header.module.scss
+
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  background-color: $background-color-dark;
+  align-items: center;
+  border-bottom: 1px solid #979797; // Gray border
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  // styles for logo
+}
+
+.nav {
+  // styles for nav
+}
+
+.cartIcon {
+  // styles for cart icon
+}

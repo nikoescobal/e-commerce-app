@@ -1,0 +1,10 @@
+.icon {
+  svg {
+    fill: currentColor; // This uses the text color as the SVG color
+  }
+
+  // Custom class for different icons
+  &.menu-icon {
+    color: #000; // Sets the color to black
+  }
+}
