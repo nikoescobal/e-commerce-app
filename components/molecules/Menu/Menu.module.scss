@@ -1,0 +1,22 @@
+// molecules/Menu/Menu.module.scss
+.container {
+  position: relative;
+}
+
+.menuClosed {
+  display: none;
+}
+
+.menuOpen {
+  display: block;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

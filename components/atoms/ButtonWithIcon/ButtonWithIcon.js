@@ -1,16 +1,34 @@
-// components/atoms/ButtonWithIcon/ButtonWithIcon.js
+// components/ButtonWithIcon/ButtonWithIcon.js
 import React from 'react';
-import Icon from '../Icons/Icon/Icon';
+import Button from '../Button/Button';
+import Icon from '../Icon/Icon'; // Adjust the import path as needed
+import styles from './ButtonWithIcon.module.scss';
 
-const ButtonWithIcon = ({ iconName, ariaLabel }) => {
-  const handleClick = () => {
-    // Handle the click event
-  };
-
+const ButtonWithIcon = ({
+  children,
+  className,
+  onClick,
+  ariaLabel,
+  type = 'button',
+  variant = 'primary',
+  disabled = false,
+  iconSrc,
+  iconAlt,
+  ...props
+}) => {
   return (
-    <button aria-label={ariaLabel} onClick={handleClick}>
-      <Icon name={iconName} label={ariaLabel} />
-    </button>
+    <Button
+      type={type}
+      className={className}
+      onClick={onClick}
+      aria-label={ariaLabel}
+      variant={variant}
+      disabled={disabled}
+      {...props}
+    >
+      {children}
+      {iconSrc && <Icon src={iconSrc} alt={iconAlt} className={styles.icon} />}
+    </Button>
   );
 };
 

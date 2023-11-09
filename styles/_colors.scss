@@ -3,13 +3,19 @@ $color-primary: #d87d4a;
 $color-secondary: #101010;
 $color-tertiary: #f1f1f1;
 
+// Hover colors
+$color-primary-hover: #fbaf85;
+$color-secondary-hover: #000000;
+$text-color-dark-hover: #d87d4a;
+
 // Text colors
-$text-color-dark: #2c2c2c;
+$text-color-dark: #000000;
 $text-color-light: #ffffff;
 
 // Background colors
 $background-color-light: #fafafa;
 $background-color-dark: #101010;
+$background-color-dark-2: #151515;
 
 // Dark Mode colors
 $dark-mode-primary: $color-primary;
@@ -26,6 +32,6 @@ $light-mode-text: $text-color-dark;
 $light-mode-background: $background-color-light;
 
 // Other colors (if needed, for error, success or info messages)
-$error-color: #ff0000;
+$error-color: #cd2c2c;
 $success-color: #28a745;
 $info-color: #17a2b8;

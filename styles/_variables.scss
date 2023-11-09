@@ -13,11 +13,6 @@ $light-mode--dark-3: #bdbdbd;
 $light-mode-text-color: #0d0e0e;
 $dark-mode-text-color: white;
 
-// $light-mode-waves-color: #dfeaff;
-$light-mode-waves-start: #e9f2ff;
-$light-mode-waves-color: #fefeff;
-// $light-mode-waves-color: #d4ddf1;
-
 $transparent-darker: rgba(
   $color: black,
   $alpha: 0.4,
@@ -41,6 +36,3 @@ $light-mode-tertiary: rgba(
   $color: #cadbff,
   $alpha: 0.7,
 );
-
-$ln-blue: rgb(30, 79, 188);
-$card-height: 250px;

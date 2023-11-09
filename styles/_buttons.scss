@@ -4,9 +4,8 @@
   width: 10rem;
   height: 3rem;
   background-color: $color-primary;
-  color: $color-text-dark;
+  color: $text-color-light;
   border: none;
-  border-radius: 0.75rem;
   font-family: 'Manrope', sans-serif;
   font-weight: bold;
   text-align: center;
@@ -53,7 +52,7 @@
 @mixin btn-see-product-dark {
   @include btn-see-product;
   background-color: $color-secondary;
-  color: $color-text-light;
+  color: $text-color-light;
 
   &:hover {
     background-color: $color-primary; // primary color background on hover for dark mode
@@ -73,7 +72,7 @@
 @mixin btn-outline-dark {
   @include btn-outline;
   border-color: $color-text-light;
-  color: $color-text-light;
+  color: $text-color-light;
 
   &:hover {
     background-color: $color-primary; // primary color background on hover for dark mode

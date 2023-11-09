@@ -6,22 +6,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
   padding: 2rem 1.5rem;
   background-color: $background-color-dark;
   align-items: center;
-  border-bottom: 1px solid #979797; // Gray border
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
+  border-bottom: 1px solid #979797;
 }
 
 .logo {
