@@ -1,49 +1,70 @@
 @use './colors' as *;
 
-@mixin btn-see-product {
-  width: 10rem;
-  height: 3rem;
-  background-color: $color-primary;
-  color: $text-color-light;
-  border: none;
+@mixin btn-base {
+  padding: 1rem 2rem;
   font-family: 'Manrope', sans-serif;
   font-weight: bold;
+  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: inline-block;
+  border: none;
+  border-radius: none;
+  line-height: normal;
 
-  &:hover {
-    background-color: $color-secondary; // light background on hover
+  &:hover,
+  &:focus {
+    // Define hover and focus styles
   }
 
   &:active {
-    background-color: darken($color-secondary, 5%); // slightly darker on active
+    // Define active styles
+  }
+
+  &:disabled {
+    // Define disabled styles
+  }
+}
+
+@mixin btn-see-product {
+  @include btn-base;
+  background-color: $color-primary;
+  color: $text-color-light;
+
+  &:hover {
+    background-color: $color-primary-hover; // light background on hover
+  }
+
+  &:active {
+    background-color: darken($color-primary, 5%); // slightly darker on active
   }
 }
 
 @mixin btn-shop {
-  @include btn-see-product;
-  background-color: $color-secondary; // initially dark background
-  color: $color-primary; // initially primary color text
+  @include btn-base;
+  background-color: unset;
+  color: $color-primary;
 
   &:hover {
-    color: $color-secondary; // text color switches to dark on hover
+    color: $text-color-dark-hover;
   }
 }
 
 @mixin btn-outline {
-  @include btn-see-product;
+  @include btn-base;
   background-color: transparent;
   border: 1px solid $color-primary;
   color: $color-primary;
 
   &:hover {
-    background-color: $color-secondary; // light background on hover
+    background-color: $color-dark;
+    color: $text-color-light;
   }
 
   &:active {
-    background-color: darken($color-secondary, 5%); // slightly darker on active
+    background-color: darken($color-secondary, 5%);
   }
 }
 
@@ -56,6 +77,7 @@
 
   &:hover {
     background-color: $color-primary; // primary color background on hover for dark mode
+    // background-color: lighten($color-secondary, 10%); // slightly lighter for dark mode
   }
 }
 
@@ -66,15 +88,17 @@
 
   &:hover {
     color: $color-primary; // text color switches to primary on hover for dark mode
+    // background-color: darken($color-primary, 10%); // slightly darker for dark mode
   }
 }
 
 @mixin btn-outline-dark {
   @include btn-outline;
-  border-color: $color-text-light;
+  border-color: $text-color-light;
   color: $text-color-light;
 
   &:hover {
-    background-color: $color-primary; // primary color background on hover for dark mode
+    background-color: $text-color-light;
+    color: $color-primary;
   }
 }
