@@ -1,4 +1,6 @@
 import './globals.css';
+import Header from '../components/organisms/Header/Header';
+// import styles from '../components/organisms/Header/Header.module.scss';
 
 export const metadata = {
   title: 'Audiophile',
@@ -8,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

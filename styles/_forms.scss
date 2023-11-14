@@ -1,0 +1,112 @@
+// @use './breakpoints' as *;
+// @use './colors' as *;
+
+// %input-base {
+//   padding: 1rem;
+//   border-radius: 0.5rem;
+//   border: 1px solid $color-secondary;
+//   font-family: 'Manrope', sans-serif;
+//   font-size: 1rem;
+//   line-height: 1.5;
+//   color: $text-color-dark;
+//   background-color: $background-color-light;
+
+//   &:focus {
+//     outline: none;
+//     border-color: $color-primary;
+//   }
+
+//   &:disabled {
+//     background-color: $background-color-dark-2;
+//     color: $text-color-light;
+//     cursor: not-allowed;
+//   }
+
+//   &::placeholder {
+//     color: $text-color-dark-hover;
+//   }
+
+//   @include md {
+//     padding: 1.25rem;
+//   }
+// }
+
+// input[type='text'],
+// input[type='email'],
+// input[type='password'],
+// input[type='number'],
+// input[type='search'],
+// input[type='date'],
+// textarea {
+//   @extend %input-base;
+//   // Additional specific styles for inputs
+// }
+
+// select {
+//   @extend %input-base;
+//   appearance: none;
+//   background-repeat: no-repeat;
+//   background-position: right 1rem center;
+//   padding-right: 2.5rem; // Adjust padding to not overlap with the icon
+// }
+
+// button,
+// input[type='submit'],
+// input[type='button'],
+// input[type='reset'] {
+//   @extend %input-base;
+//   background-color: $color-primary;
+//   color: $text-color-light;
+//   text-transform: uppercase;
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: $color-primary-hover;
+//   }
+
+//   &:active {
+//     background-color: darken($color-primary, 10%);
+//   }
+
+//   &:disabled {
+//     background-color: lighten($color-primary, 10%);
+//     color: lighten($text-color-light, 10%);
+//   }
+
+//   @include md {
+//     // Styles for md breakpoint and up
+//   }
+// }
+
+// // Error message styling
+// .errorMessage {
+//   color: $error-color;
+//   margin-top: 0.5rem;
+//   font-size: 0.875rem;
+// }
+
+// // Form layout utility classes
+// .form-group {
+//   margin-bottom: 1.5rem;
+
+//   @include md {
+//     margin-bottom: 2rem;
+//   }
+// }
+
+// .form-label {
+//   display: block;
+//   margin-bottom: 0.5rem;
+// }
+
+// // Radio and Checkbox styles
+// input[type='radio'],
+// input[type='checkbox'] {
+//   // Custom radio and checkbox styles go here
+// }
+
+// // Select dropdown arrow styling
+// select {
+//   appearance: none;
+//   // Include the custom icon here using a React component, not as a background image
+// }

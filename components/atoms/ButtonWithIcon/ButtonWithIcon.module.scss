@@ -1,4 +1,6 @@
 // components/ButtonWithIcon/ButtonWithIcon.module.scss
 .icon {
   margin-left: 0.5rem; // adjust the spacing as needed
+  border-top-right-radius: 4px;
+  object-fit: cover;
 }

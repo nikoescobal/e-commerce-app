@@ -1,42 +1,60 @@
 // components/Header/Header.js
 import styles from './Header.module.scss';
-import Image from 'next/image';
+import cn from 'classnames';
+import Image from '../../atoms/Image/Image';
 
-const Header = () => {
+const Header = ({ isBorderVisible }) => {
+  // Conditional class for the border
+  const borderClass = cn(styles.border, { [styles.visible]: isBorderVisible });
+
+  // List of navigation items, this could also come from a prop or state
+  const navItems = ['Headphones', 'Speakers', 'Earphones'];
+
   return (
     <header className={styles.header}>
-      {/* Navigation Menu */}
-      <div className={styles.menuIcon}>
-        <Image
-          src="/assets/icons/icon-hamburger.svg"
-          alt="Menu Icon"
-          width={24}
-          height={24}
-          layout="responsive"
-        />
-      </div>
+      <nav className={styles.nav}>
+        {/* Hamburger Icon */}
+        <div className={styles.menuIcon}>
+          <Image
+            src="/assets/icons/icon-hamburger.svg"
+            alt="Menu Icon"
+            width={24}
+            height={24}
+          />
+        </div>
 
-      {/* Logo */}
-      <div className={styles.logo}>
-        <Image
-          src="/assets/icons/logo.svg"
-          alt="Logo"
-          width={143}
-          height={25}
-          layout="responsive"
-        />
-      </div>
+        {/* Logo */}
+        <div className={styles.logo}>
+          <Image
+            src="/assets/icons/logo.svg"
+            alt="Logo"
+            width={143}
+            height={25}
+          />
+        </div>
 
-      {/* Cart Icon */}
-      <div className={styles.cartIcon}>
-        <Image
-          src="/assets/icons/icon-cart.svg"
-          alt="Cart Icon"
-          width={24}
-          height={24}
-          layout="responsive"
-        />
-      </div>
+        {/* Navigation Links */}
+        {/* <ul className={styles.navList}>
+          {navItems.map((item, index) => (
+            <li key={index} className={styles.navItem}>
+              {item}
+            </li>
+          ))}
+        </ul> */}
+
+        {/* Cart Icon */}
+        <div className={styles.cartIcon}>
+          <Image
+            src="/assets/icons/icon-cart.svg"
+            alt="Cart Icon"
+            width={24}
+            height={24}
+          />
+        </div>
+      </nav>
+
+      {/* Conditional Border */}
+      <div className={borderClass}></div>
     </header>
   );
 };

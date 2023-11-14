@@ -2,6 +2,7 @@
 import React from 'react';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon'; // Adjust the import path as needed
+import Image from '../Image/Image';
 import styles from './ButtonWithIcon.module.scss';
 
 const ButtonWithIcon = ({
@@ -14,6 +15,8 @@ const ButtonWithIcon = ({
   disabled = false,
   iconSrc,
   iconAlt,
+  iconWidth,
+  iconHeight,
   ...props
 }) => {
   return (
@@ -27,7 +30,15 @@ const ButtonWithIcon = ({
       {...props}
     >
       {children}
-      {iconSrc && <Icon src={iconSrc} alt={iconAlt} className={styles.icon} />}
+      {iconSrc && (
+        <Image
+          src={iconSrc}
+          alt={iconAlt}
+          width={iconWidth}
+          height={iconHeight}
+          className={styles.icon}
+        />
+      )}
     </Button>
   );
 };

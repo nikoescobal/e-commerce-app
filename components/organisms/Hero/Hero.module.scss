@@ -9,12 +9,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // background-color: $background-color-dark-2; // Assume the background color before the image loads
+  background-color: $background-color-dark-2; // Assume the background color before the image loads
   z-index: 1;
 
-  //   @include md {
-  //     min-height: 50rem; // Adjust for larger screens based on your design
-  //   }
+  @include md {
+    min-height: 50rem; // Adjust for larger screens based on your design
+  }
 }
 
 .title {

@@ -1,0 +1,33 @@
+// molecules/ProductCategories/ProductCategories.module.scss
+@use '../../../styles/colors' as *;
+
+.productCategories {
+  //   display: flex;
+  //   flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 4.5rem;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 7.5rem;
+  background: $color-light;
+}
+
+// .categories {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1rem;
+
+//   .category {
+//     display: block;
+//     text-align: center;
+
+//     h2 {
+//       margin-top: 0.5rem;
+//       font-size: 1.5rem;
+//     }
+//   }
+// }
+
+.productCategory {
+  scale: 2;
+}

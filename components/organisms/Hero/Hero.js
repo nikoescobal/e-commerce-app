@@ -2,7 +2,8 @@
 import React from 'react';
 import Typography from '../../atoms/Typography/Typography';
 import Button from '../../atoms/Button/Button';
-import Image from 'next/image';
+// import Image from 'next/image';
+import Image from '../../atoms/Image/Image';
 import styles from './Hero.module.scss';
 import classnames from 'classnames';
 
@@ -13,13 +14,13 @@ const Hero = () => {
         <Image
           src="/assets/images/home/mobile/image-header.jpg"
           alt="Hero Background"
-          layout="fill"
+          fill
           objectFit="cover"
           objectPosition="50% 75%"
           className={styles.heroImage}
           placeholder="blur"
           priority
-          blurDataURL="/assets/images/home/mobile/image-header.png" // Use a base64 encoded image here
+          blurDataURL="/assets/images/home/mobile/image-header.jpg" // Use a base64 encoded image here
         />
       </div>
       <div className={styles.content}>

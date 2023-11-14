@@ -1,0 +1,46 @@
+// components/ProductCard/ProductCard.module.scss
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+
+.productCard {
+  border: 1px solid $color-grey-light;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba($color-black, 0.1);
+  }
+}
+
+.productInfo {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.productName {
+  @include typography('h3');
+  color: $color-black;
+  margin-bottom: 8px;
+}
+
+.productDescription {
+  @include typography('body');
+  color: $color-grey-dark;
+  margin-bottom: 16px;
+}
+
+.productPrice {
+  @include typography('subtitle');
+  color: $color-black;
+  margin-bottom: 16px;
+}
+
+.addToCartButton {
+  @include buttons('primary');
+  align-self: stretch; // make button stretch to full width of the card
+}
