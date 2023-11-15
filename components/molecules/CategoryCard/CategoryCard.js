@@ -50,7 +50,7 @@ const CategoryCard = ({ title, imageUrl }) => {
           color="text-color-dark"
           fontWeight="bold"
           textAlign="center"
-          variant="p"
+          variant="h6"
           className={styles.title}
         >
           {title.toUpperCase()}

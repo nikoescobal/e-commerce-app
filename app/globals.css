@@ -85,6 +85,19 @@ body {
   overflow-x: hidden;
   font-family: 'Manrope', sans-serif;
 }
+
+img,
+svg {
+  width: 100% !important;
+  height: auto;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 /*
 body {
   color: rgb(var(--foreground-rgb));

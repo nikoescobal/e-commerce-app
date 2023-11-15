@@ -11,6 +11,8 @@
 
 .title {
   color: $text-color-dark;
+  font-size: 0.9375rem;
+  letter-spacing: 0.06694rem;
 }
 
 .imageContainer {
@@ -35,10 +37,10 @@
 // }
 
 .shopButton {
-  //   opacity: 0.5;
   background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $color-dark;
+  letter-spacing: 0.0625rem;
 }

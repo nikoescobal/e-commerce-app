@@ -4,9 +4,6 @@ import cn from 'classnames';
 import Image from '../../atoms/Image/Image';
 
 const Header = ({ isBorderVisible }) => {
-  // Conditional class for the border
-  const borderClass = cn(styles.border, { [styles.visible]: isBorderVisible });
-
   // List of navigation items, this could also come from a prop or state
   const navItems = ['Headphones', 'Speakers', 'Earphones'];
 
@@ -53,8 +50,7 @@ const Header = ({ isBorderVisible }) => {
         </div>
       </nav>
 
-      {/* Conditional Border */}
-      <div className={borderClass}></div>
+      <div className={styles.border}></div>
     </header>
   );
 };

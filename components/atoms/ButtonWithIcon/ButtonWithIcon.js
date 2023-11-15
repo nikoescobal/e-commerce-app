@@ -1,7 +1,7 @@
 // components/ButtonWithIcon/ButtonWithIcon.js
 import React from 'react';
 import Button from '../Button/Button';
-import Icon from '../Icon/Icon'; // Adjust the import path as needed
+import Icon from '../Icon/Icon';
 import Image from '../Image/Image';
 import styles from './ButtonWithIcon.module.scss';
 
@@ -29,7 +29,7 @@ const ButtonWithIcon = ({
       disabled={disabled}
       {...props}
     >
-      {children}
+      <span className={styles.text}>{children}</span>
       {iconSrc && (
         <Image
           src={iconSrc}
