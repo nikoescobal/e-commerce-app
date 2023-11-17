@@ -1,15 +1,21 @@
 // molecules/ProductCategories/ProductCategories.module.scss
 @use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
 
 .productCategories {
   //   display: flex;
   //   flex-direction: column;
   display: grid;
-  grid-template-columns: repeat(1fr);
+  grid-template-columns: 1fr;
   gap: 4.5rem;
   margin: 0 auto;
   padding: 6rem 1.5rem 7.5rem;
   background: $color-light;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 9rem 2.5rem 6rem;
+  }
 }
 
 // .categories {
@@ -29,5 +35,4 @@
 // }
 
 .productCategory {
-  scale: 2;
 }

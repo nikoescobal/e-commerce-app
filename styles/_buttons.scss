@@ -3,8 +3,6 @@
 @mixin btn-base {
   padding: 1rem 2rem;
   font-family: 'Manrope', sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
@@ -13,6 +11,11 @@
   border: none;
   border-radius: none;
   line-height: normal;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
 
   &:hover,
   &:focus {

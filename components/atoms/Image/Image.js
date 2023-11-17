@@ -1,8 +1,9 @@
+// atoms/Image/Image.js
 import NextImage from 'next/image';
 import cn from 'classnames';
-import styles from './Image.module.scss'; // Assuming you have a corresponding SCSS file
+import styles from './Image.module.scss';
 
-const Image = ({ src, alt, layout, className, ...props }) => {
+const Image = ({ src, alt, srcSet, sizes, layout, className, ...props }) => {
   const isSVG = src.includes('.svg');
 
   // Combine custom class names with the SVG class conditionally
@@ -11,7 +12,12 @@ const Image = ({ src, alt, layout, className, ...props }) => {
     [className]: className,
   });
 
-  const imageProps = isSVG ? {} : { layout: layout || 'fill' };
+  // Include srcSet and sizes in imageProps if they are provided
+  const imageProps = {
+    ...(isSVG ? {} : { layout: layout || 'fill' }),
+    ...(srcSet && { srcSet }),
+    ...(sizes && { sizes }),
+  };
 
   return (
     <div className={imageClass}>

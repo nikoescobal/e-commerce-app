@@ -3,28 +3,45 @@
 @use '../../../styles/colors' as *;
 
 .hero {
-  position: relative;
+  // position: relative;
   min-height: 37.5rem; // Adjust to match the design height for the hero section
+  // background-color: $background-color-dark-2; // Assume the background color before the image loads
+  // z-index: 1;
+
+  // @include md {
+  //   min-height: 100%; // Adjust for larger screens based on your design
+  // }
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $background-color-dark-2; // Assume the background color before the image loads
-  z-index: 1;
 
   @include md {
-    min-height: 100%; // Adjust for larger screens based on your design
+    min-height: 38rem;
+    margin-bottom: 3rem;
   }
 }
 
 .title {
   opacity: 0.4964;
   padding-bottom: 1rem;
+
+  @include md {
+    font-size: 0.875rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 .subtitle {
   padding-bottom: 1.5rem;
   font-size: 2.25rem;
+
+  @include md {
+    font-size: 3.5rem;
+    line-height: 3.625rem;
+    letter-spacing: 0.125rem;
+  }
 }
 
 .description {
@@ -33,37 +50,73 @@
 }
 
 .background {
+  // position: absolute;
+  // top: 0; // Set top to the height of the navbar if it's fixed at the top
+  // left: 0;
+  // right: 0;
+  // height: 37.5rem; // Match this to the height of your hero section
+  // z-index: -1;
+  // overflow: hidden; // Ensures the image doesn't exceed the div container
+
+  // @include md {
+  //   // height: 50rem; // Adjust to match the hero section
+  // }
   position: absolute;
-  top: 0; // Set top to the height of the navbar if it's fixed at the top
-  left: 0;
-  right: 0;
-  height: 37.5rem; // Match this to the height of your hero section
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  overflow: hidden; // Ensures the image doesn't exceed the div container
 
   @include md {
-    // height: 50rem; // Adjust to match the hero section
+    height: auto;
+    width: auto;
   }
 }
 
 .heroImage {
-  object-fit: cover;
+  // object-fit: cover;
+  // width: 100%;
+  // transform: translateY(-3rem);
+  // height: 100%;
   width: 100%;
+  height: auto;
+  object-fit: cover;
   transform: translateY(-3rem);
   height: 100%;
+
+  @include md {
+    content: url('/assets/images/home/tablet/image-header.jpg');
+    transform: translateY(-1.5rem);
+  }
+
+  @include lg {
+    // Desktop image
+    content: url('/assets/images/home/desktop/image-hero.jpg');
+  }
 }
 
 .content {
   z-index: 2;
-  padding: 2rem; // Provides padding around the content, adjust as needed
+  padding: 2rem;
   text-align: center;
   position: relative; // This is needed for z-index to take effect
   width: 100%; // Ensures content takes up the width of the hero section
   max-width: 20.5rem; // Use max-width for better responsiveness
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @include md {
-    max-width: 100%;
+    max-width: 23.6875rem;
+    padding: 2rem 1rem;
   }
+
+  // @include lg {
+  //   // Adjust content for desktop
+  //   max-width: none;
+  //   text-align: left;
+  //   padding: 4rem; // Example padding, adjust as needed
+  // }
 }
 
 .title,
