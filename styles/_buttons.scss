@@ -9,13 +9,17 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   display: inline-block;
   border: none;
-  border-radius: none;
+  // border-radius: none;
   line-height: normal;
   font-size: 0.8125rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.0625rem;
+  max-width: 10rem;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
 
   &:hover,
   &:focus {
