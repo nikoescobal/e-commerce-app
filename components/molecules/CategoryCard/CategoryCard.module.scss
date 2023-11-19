@@ -43,4 +43,10 @@
   align-items: center;
   color: $color-dark;
   letter-spacing: 0.0625rem;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+  }
 }

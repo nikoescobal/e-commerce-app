@@ -16,10 +16,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: -3rem;
 
   @include md {
-    min-height: 38rem;
-    margin-bottom: 3rem;
+    min-height: 100%;
+    min-height: 43rem;
+    margin-bottom: unset;
   }
 
   @include lg {
@@ -27,7 +29,14 @@
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     place-content: center;
+    // min-height: 30vh;
+    margin-bottom: -2rem;
+
     // height: 100vh;
+  }
+
+  @include xl {
+    min-height: 94vh;
   }
 }
 
@@ -117,6 +126,7 @@
   @include lg {
     // Desktop image
     content: url('/assets/images/home/desktop/image-hero.jpg');
+    // object-fit: contain;
   }
 }
 
@@ -139,7 +149,7 @@
 
   @include lg {
     text-align: left;
-    align-items: unset;
+    align-items: flex-start;
   }
 
   // @include lg {

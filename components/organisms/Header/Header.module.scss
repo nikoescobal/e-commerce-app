@@ -22,10 +22,12 @@
 
   @include md {
     margin: 0 auto;
-    width: 43.0625rem;
+    width: 85%;
+    // width: 43.0625rem;
   }
   @include lg {
-    width: 69.375rem;
+    // width: 69.375rem;
+    width: 75%;
   }
 }
 
