@@ -10,6 +10,18 @@
   background-color: $background-color-dark-4;
   align-items: center;
   // border-bottom: 1px solid #979797;
+
+  @include md {
+    padding: 2rem 2.48rem;
+  }
+
+  @include xl {
+    padding: 2rem 4.29rem;
+  }
+
+  // @include xl {
+  //   justify-content: space-around;
+  // }
 }
 
 .border {
@@ -22,12 +34,14 @@
 
   @include md {
     margin: 0 auto;
-    width: 85%;
+    // width: 93%;
+    width: 89vw;
     // width: 43.0625rem;
   }
   @include lg {
     // width: 69.375rem;
-    width: 75%;
+    // width: 85%;
+    width: 89vw;
   }
 }
 
