@@ -1,0 +1,77 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/buttons' as *;
+
+.heroCard {
+  position: relative;
+  text-align: center;
+  background: $color-primary;
+  border-radius: 0.5rem;
+  width: 100%;
+  min-width: 20.4375rem;
+  height: 37.5rem;
+  overflow: hidden;
+}
+
+.heroContent {
+  text-align: center;
+  padding: 1.25rem 2.4rem 0.75rem;
+}
+
+// .background {
+//   background: url('/assets/images/home/desktop/pattern-circles.svg');
+//   background-repeat: no-repeat;
+//   background-position: top center;
+//   //   scale: 2;
+// }
+
+.name {
+  text-align: center;
+  font-size: 2.25rem;
+  font-style: normal;
+  line-height: 2.5rem; /* 111.111% */
+  letter-spacing: 0.08038rem;
+}
+
+.description {
+  padding: 1.5rem 0;
+}
+
+.image {
+  //   position: relative !important;
+}
+
+.heroCard img {
+  //   position: absolute !important;
+}
+
+.bgImageWrapper {
+  height: 100%;
+  width: 100%;
+  top: -8rem;
+  //   width: 20rem;
+  //   height: 20rem;
+  position: absolute;
+}
+
+.background {
+  //   scale: 3;
+}
+
+.imageWrapper {
+  max-width: 10.765rem;
+  //   height: 37.5rem;
+  padding: 3.44rem 0 2rem;
+  margin: 0 auto;
+}
+
+.imageWrapper img {
+  position: relative !important;
+  //   bottom: 10rem;
+}
+
+.button {
+  @include btn-see-product-dark;
+  margin: 0 auto;
+}

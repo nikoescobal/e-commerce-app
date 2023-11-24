@@ -7,7 +7,7 @@ import CategoryCard from '../../molecules/CategoryCard/CategoryCard';
 
 const ProductCategories = () => {
   return (
-    <section className={styles.productCategories}>
+    <section className={styles.wrapper}>
       {content.map((category) => (
         <CategoryCard
           className={styles.productCategory}

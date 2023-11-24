@@ -1,0 +1,29 @@
+// @src/components/FeaturedProducts/FeaturedProducts.module.scss
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/mixins' as *;
+
+.featuredProducts {
+  @include section-padding;
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // gap: 1.5rem;
+  // place-items: center;
+  // object-fit: cover;
+
+  // @include md {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+
+  // @include lg {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
+
+  // .productCard {
+  //   // Styles for the regular product cards
+  //   &.split {
+  //     @include md {
+  //       grid-column: span 2; // On tablet and desktop, the split card spans two columns
+  //     }
+  //   }
+  // }
+}

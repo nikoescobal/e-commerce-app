@@ -2,6 +2,7 @@
 
 @use '../../../styles/breakpoints' as *;
 @use '../../../styles/colors' as *;
+@use '../../../styles/mixins' as *;
 
 .nav {
   display: flex;
@@ -41,7 +42,7 @@
   @include lg {
     // width: 69.375rem;
     // width: 85%;
-    width: 89vw;
+    width: max(89vw);
   }
 }
 

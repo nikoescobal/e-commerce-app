@@ -9,7 +9,7 @@ const Typography = ({
   children,
   className,
   fontWeight = 'regular',
-  color = 'text-color-dark',
+  color = 'dark',
   textAlign = 'inherit',
   size,
   ...props
@@ -20,11 +20,13 @@ const Typography = ({
   const classNames = classnames(
     styles[variant],
     styles[`font-weight-${fontWeight}`],
-    styles[`color-${color}`],
+    styles[`text-color-${color}`],
     { [styles[`text-${textAlign}`]]: textAlign !== 'inherit' },
     { [styles[`size-${size}`]]: size },
     className
   );
+
+  console.log('classes:', classNames);
 
   return (
     <Tag className={classNames} {...props}>

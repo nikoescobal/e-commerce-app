@@ -1,20 +1,35 @@
 // molecules/ProductCategories/ProductCategories.module.scss
 @use '../../../styles/colors' as *;
 @use '../../../styles/breakpoints' as *;
+@use '../../../styles/mixins' as *;
 
-.productCategories {
+.wrapper {
   //   display: flex;
   //   flex-direction: column;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4.5rem;
+  gap: 4.25rem;
   margin: 0 auto;
-  padding: 6rem 1.5rem 7.5rem;
+  // padding: 6rem 1.5rem 7.5rem;
+  @include section-padding;
+  // padding-block: 6rem 7.5rem;
   background: $color-light;
 
   @include md {
     grid-template-columns: repeat(3, 1fr);
+    // padding: 9rem 2.5rem 6rem;
+    gap: 0.63rem;
+    padding-block: 9rem 6rem;
     padding: 9rem 2.5rem 6rem;
+  }
+
+  @include lg {
+    gap: 1.88rem;
+    padding: 9rem 4.31rem 6rem;
+  }
+
+  @include xl {
+    padding: 9rem 10.31rem 6rem;
   }
 }
 
@@ -35,4 +50,6 @@
 // }
 
 .productCategory {
+  // width: min(100rem, 100rem);
+  // width: clamp(200px, 50%, 20rem);
 }

@@ -1,9 +1,11 @@
 // organisms/Hero/Hero.module.scss
 @use '../../../styles/breakpoints' as *;
 @use '../../../styles/colors' as *;
+@use '../../../styles/mixins' as *;
 
 .hero {
   // position: relative;
+  @include section-padding;
   min-height: 37.5rem; // Adjust to match the design height for the hero section
   // background-color: $background-color-dark-2; // Assume the background color before the image loads
   // z-index: 1;
@@ -19,7 +21,6 @@
   margin-bottom: -3rem;
 
   @include md {
-    min-height: 100%;
     min-height: 43rem;
     margin-bottom: unset;
   }
@@ -35,7 +36,12 @@
     // height: 100vh;
   }
 
-  @include xl {
+  @include lg {
+    gap: 20rem;
+  }
+
+  @include xxl {
+    gap: 30rem;
     min-height: 94vh;
     // min-height: 100vh;
   }
@@ -133,7 +139,7 @@
 
 .content {
   z-index: 2;
-  padding: 2rem;
+  // padding: 2rem;
   text-align: center;
   position: relative; // This is needed for z-index to take effect
   width: 100%; // Ensures content takes up the width of the hero section
@@ -145,7 +151,7 @@
 
   @include md {
     max-width: 23.6875rem;
-    padding: 2rem 1rem;
+    // padding: 2rem 1rem;
   }
 
   @include lg {

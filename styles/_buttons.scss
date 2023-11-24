@@ -82,8 +82,12 @@
   background-color: $color-secondary;
   color: $text-color-light;
 
-  &:hover {
-    background-color: $color-primary; // primary color background on hover for dark mode
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-light;
+    color: $color-dark;
+    outline: 1px solid black;
     // background-color: lighten($color-secondary, 10%); // slightly lighter for dark mode
   }
 }

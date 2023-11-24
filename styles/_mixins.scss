@@ -1,27 +1,25 @@
 @use './colors' as *;
+@use './breakpoints' as *;
 
-@mixin btn-styles($bgColor, $textColor) {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  font-family: 'Manrope', sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+@mixin section-padding {
+  padding: 6rem 1.5rem; // Default mobile padding
 
-  background-color: $bgColor;
-  color: $textColor;
-
-  &:hover {
-    background-color: darken($bgColor, 10%);
+  @include md {
+    padding: 9rem 2.5rem; // Tablet padding
   }
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px lighten($bgColor, 20%);
+  @include lg {
+    padding: 9rem 4.31rem; // Desktop padding
+  }
+
+  @include xl {
+    padding: 9rem 10.31rem; // Large desktop padding
+  }
+}
+
+@mixin cardHoverEffect {
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 4px 8px rgba($color-dark, 0.1);
   }
 }

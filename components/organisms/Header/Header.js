@@ -1,6 +1,6 @@
 // components/Header/Header.js
 import styles from './Header.module.scss';
-import cn from 'classnames';
+import classnames from 'classnames';
 import Image from '../../atoms/Image/Image';
 
 const Header = ({ isBorderVisible }) => {

@@ -1,46 +1,194 @@
-// components/ProductCard/ProductCard.module.scss
+// @src/components/ProductCard/ProductCard.module.scss
 @use '../../../styles/colors' as *;
 @use '../../../styles/breakpoints' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/buttons' as *;
+
+// // .wrapper img {
+// //   object-fit: cover !important;
+// // }
+
+// // .productCard {
+// //   border-radius: 8px;
+// //   overflow: hidden;
+// //   display: grid;
+// //   background-color: $color-light;
+// //   position: relative;
+// //   @include cardHoverEffect;
+
+// //   &.featured {
+// //     @include md {
+// //       grid-template-columns: 1fr 1fr;
+// //       grid-template-areas: 'image content';
+// //     }
+// //   }
+
+// //   &.splitRight {
+// //     @include md {
+// //       grid-template-columns: 1fr 1fr;
+// //       grid-template-areas: 'image content';
+// //     }
+// //   }
+
+// //   &.splitLeft {
+// //     @include md {
+// //       grid-template-columns: 1fr 1fr;
+// //       grid-template-areas: 'content image';
+// //     }
+// //   }
+
+// //   // Default layout for mobile
+// //   &.default {
+// //     grid-template-areas: 'image' 'content';
+// //   }
+// // }
+// // // ...other styles
+
+// .productCard {
+//   display: block;
+//   background-color: $color-light;
+//   text-align: center;
+
+//   @include md {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: 20px;
+//   }
+
+//   &.featured {
+//     background-color: $color-primary;
+//     color: $color-light;
+
+//     @include md {
+//       grid-template-areas:
+//         'image details'
+//         'image button';
+//       text-align: left;
+//     }
+//   }
+
+//   // Additional layout styles...
+// }
+
+// .imageWrapper {
+//   // Styles specific to the image wrapper
+// }
+
+// .details {
+//   padding: 20px;
+
+//   @include md {
+//     padding: 40px;
+//   }
+// }
+
+// .title {
+//   // Styles specific to the title
+// }
+
+// // ... Additional styles for other elements
+// .productCard {
+//   // Common styles for all cards
+// }
+
+// .badge {
+//   // Styles for the 'New Product' badge
+// }
+
+// .featured {
+//   // Specific styles for the featured card
+//   background-color: $color-primary;
+//   color: $text-color-light;
+// }
+
+// .standard {
+//   // Styles for the standard card, include media queries for tablet and desktop
+//   @include md {
+//     // Adjust to half-width on tablet and desktop
+//   }
+// }
+
+// .split {
+//   // Styles for the split cards
+//   @include md {
+//     // Ensure they are displayed in two columns on tablet and desktop
+//   }
+// }
 
 .productCard {
-  border: 1px solid $color-grey-light;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  background-color: $color-white;
+  // Shared styles for all product cards
+  position: relative;
+  padding: 2rem;
+  text-align: center;
 
-  &:hover {
-    box-shadow: 0 4px 8px rgba($color-black, 0.1);
+  &.featured {
+    // Styles specific to the featured card
+    background-color: $color-primary;
+    color: $color-light;
+    padding: 4rem;
+    text-align: left;
+
+    .circlePattern {
+      position: absolute;
+      object-fit: cover;
+      top: 0; // Adjust as per design
+      right: -1rem; // Adjust as per design
+      z-index: 0;
+    }
+  }
+
+  &.standard {
+    // Styles for the standard card
+    // Adjust as per design
+  }
+
+  &.split {
+    // Styles for the split cards
+    // Adjust as per design
   }
 }
 
-.productInfo {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+.button {
+  @include btn-see-product-dark;
 }
 
-.productName {
-  @include typography('h3');
-  color: $color-black;
-  margin-bottom: 8px;
+.imageWrapper {
+  // Styles for the image wrapper
+  position: relative;
+  // width: 100%;
+  // height: 100%;
 }
 
-.productDescription {
-  @include typography('body');
-  color: $color-grey-dark;
-  margin-bottom: 16px;
+.content {
+  // Styles for the content area
+  position: relative;
+  z-index: 1;
 }
 
-.productPrice {
-  @include typography('subtitle');
-  color: $color-black;
-  margin-bottom: 16px;
+.badge {
+  // Styles for the 'New Product' badge
+  background-color: $color-secondary;
+  color: $color-light;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 2rem; // Adjust as per design
+  left: 2rem; // Adjust as per design
 }
 
-.addToCartButton {
-  @include buttons('primary');
-  align-self: stretch; // make button stretch to full width of the card
+@include md {
+  .productCard {
+    // Adjustments for the regular product cards on tablet and desktop
+    // Ensuring full-width for featured and standard cards
+    &.featured,
+    &.standard {
+      grid-column: 1 / -1;
+    }
+
+    &.split {
+      // For tablet, ensure they appear in two columns
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }

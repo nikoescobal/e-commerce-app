@@ -44,6 +44,8 @@ $line-heights: (
   'body': 1.5625rem,
   'overline': 1.1875rem,
   'subtitle': 1.5625rem,
+  'p': 1.5625rem,
+  'span': 1.5625rem,
 );
 
 // Define letter spacings
@@ -57,6 +59,8 @@ $letter-spacings: (
   'body': normal,
   'overline': 0.625rem,
   'subtitle': normal,
+  'p': normal,
+  'span': normal,
 );
 
 $text-alignments: (
@@ -121,7 +125,7 @@ $text-alignments: (
 }
 
 .font-weight-light {
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .font-weight-regular {
