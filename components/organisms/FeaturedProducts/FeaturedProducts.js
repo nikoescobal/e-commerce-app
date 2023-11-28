@@ -3,7 +3,9 @@ import React from 'react';
 import ProductCard from '../../molecules/ProductCard/ProductCard';
 import styles from './FeaturedProducts.module.scss';
 import products from './content';
-import HeroCard from '../HeroCard/HeroCard';
+import HeroCardTop from '../HeroCardTop/HeroCardTop';
+import HeroCardMid from '../HeroCardMid/HeroCardMid';
+import HeroCardBottom from '../HeroCardBottom/HeroCardBottom';
 
 const FeaturedProducts = () => {
   return (
@@ -17,7 +19,9 @@ const FeaturedProducts = () => {
     //   ))}
     // </section>
     <section className={styles.featuredProducts}>
-      <HeroCard />
+      <HeroCardTop />
+      <HeroCardMid />
+      {/* <HeroCardBottom /> */}
     </section>
   );
 };

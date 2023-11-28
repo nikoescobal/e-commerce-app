@@ -3,10 +3,11 @@
 @use '../../../styles/mixins' as *;
 
 .featuredProducts {
-  @include section-padding;
-  // display: grid;
+  @include section-padding-hero;
+  display: flex;
+  flex-direction: column;
   // grid-template-columns: 1fr;
-  // gap: 1.5rem;
+  gap: 1.5rem 0;
   // place-items: center;
   // object-fit: cover;
 
