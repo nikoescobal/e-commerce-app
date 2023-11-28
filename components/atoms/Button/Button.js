@@ -8,7 +8,7 @@ const Button = ({
   onClick,
   ariaLabel,
   type = 'button',
-  variant = 'primary', // 'primary' corresponds to 'See Product' in design system
+  variant = 'primary', // 'primary', 'shop', 'outline'
   disabled = false,
   ...props
 }) => {
