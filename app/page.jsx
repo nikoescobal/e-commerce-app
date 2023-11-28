@@ -1,4 +1,5 @@
-import styles from './page.module.css';
+// import styles from './page.module.css';
+import styles from '../styles/globals.scss';
 import Header from '../components/organisms/Header/Header';
 import Hero from '../components/organisms/Hero/Hero';
 import ProductCategories from '../components/organisms/ProductCategories/ProductCategories';
