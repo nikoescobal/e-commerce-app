@@ -14,9 +14,7 @@ const Hero = () => {
           // height={100}
           src="/assets/images/home/mobile/image-header.jpg" // Default image for mobile
           alt="Hero Background"
-          className={classnames(styles.heroImage, {
-            [styles.heroImageDesktop]: false, // We will enable this class using state or props based on the viewport
-          })}
+          className={styles.heroImage}
           // layout="responsive"
           priority
           fill
