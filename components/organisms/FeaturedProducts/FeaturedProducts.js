@@ -21,7 +21,7 @@ const FeaturedProducts = () => {
     <section className={styles.featuredProducts}>
       <HeroCardTop />
       <HeroCardMid />
-      {/* <HeroCardBottom /> */}
+      <HeroCardBottom />
     </section>
   );
 };

@@ -1,0 +1,91 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/buttons' as *;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 12rem;
+  position: relative;
+  //   margin: 20rem 0;
+  width: 100%;
+  width: 100%;
+  min-width: 20.4375rem;
+  min-height: 12.5rem;
+  // border-radius: 0.5rem;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.content {
+  border-radius: 0.5rem;
+  background: #f1f1f1;
+  min-height: 12.5rem;
+}
+
+// .content {
+//   // background-color: red !important;
+//   // display: flex;
+//   //   gap: 2rem;
+//   //   // flex-direction: column;
+//   //   // align-items: center;
+//   //   // justify-content: center;
+//   //   position: relative;
+//   //   top: 7.75rem;
+//   //   left: 1.65rem;
+
+//   //   @include md {
+//   //     top: 8rem;
+//   //     left: 4rem;
+//   //   }
+// }
+
+// .description {
+//   padding-bottom: 2rem;
+// }
+
+.image {
+  //   position: absolute;
+  border-radius: 0.5rem;
+  // z-index: -1;
+  //   top: 16rem;
+  // min-width: 10.765rem;
+  // max-height: 12.9375rem;
+  // min-height: 12rem;
+  max-height: 100%;
+  // min-height: 10rem;
+  width: 100%;
+  // padding-block: 3.44rem 2rem;
+  // position: relative;
+  margin: 0 auto;
+  //   min-width: 20.4375rem;
+  min-height: 12.5rem;
+  // min-width: 33.12225rem;
+  //   min-height: 22.9375rem;
+  // transform: translateY(-1.5rem);
+  // top: 12rem;
+  background-image: url('/assets/images/home/mobile/image-earphones-yx1.jpg'); // Default mobile image
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+
+  @include md {
+    // content: url('/assets/images/home/tablet/image-speaker-zx9.png');
+    background-image: url('/assets/images/home/tablet/image-earphones-yx1.jpg'); // Tablet image
+    // transform: translateY(-1.5rem);
+    transform: unset;
+    // width: 100%;
+    // top: 8rem;
+    min-width: 12.32575rem;
+    // height: 45rem;
+  }
+
+  @include lg {
+    // Desktop image
+    background-image: url('/assets/images/home/desktop/image-earphones-yx1.jpg'); // Desktop image
+  }
+}
