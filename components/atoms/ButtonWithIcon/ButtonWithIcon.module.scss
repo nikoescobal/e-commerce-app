@@ -1,3 +1,4 @@
+@use '../../../styles/buttons' as *;
 // components/ButtonWithIcon/ButtonWithIcon.module.scss
 .text {
   opacity: 0.5;
@@ -12,4 +13,32 @@
 .icon {
   margin-left: 0.83rem;
   // object-fit: cover;
+}
+
+// Button.module.scss
+
+.button {
+  // Use mixins for the 'See Product' button style
+  @include btn-see-product;
+
+  // Modifiers for other button styles based on props
+  &.variant-shop {
+    @include btn-shop;
+  }
+
+  &.variant-outline {
+    @include btn-outline;
+  }
+
+  // You can add dark mode styles here as needed
+  &.dark {
+    @include btn-see-product-dark;
+  }
+
+  // Include disabled state styles
+  &.disabled {
+    // Set styles for disabled state
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
