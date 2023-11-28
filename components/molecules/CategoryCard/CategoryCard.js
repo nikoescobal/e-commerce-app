@@ -22,7 +22,8 @@ const CategoryCard = ({ title, imageUrl }) => {
           {title.toUpperCase()}
         </Typography>
         <ButtonWithIcon
-          className={styles.shopButton}
+          variant="shop"
+          // className={styles.shopButton}
           iconSrc="/assets/icons/icon-arrow-right.svg"
           iconAlt="Right Arrow"
           iconWidth={18} // Width of the icon in pixels

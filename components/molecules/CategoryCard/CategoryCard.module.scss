@@ -36,18 +36,18 @@
 //   height: auto; // 'auto' will maintain the aspect ratio of the image
 // }
 
-.shopButton {
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $color-dark;
-  letter-spacing: 0.0625rem;
+// .shopButton {
+//   background-color: transparent;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: $color-dark;
+//   letter-spacing: 0.0625rem;
 
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: transparent;
-    color: $color-primary;
-  }
-}
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     background-color: transparent;
+//     color: $color-primary;
+//   }
+// }
