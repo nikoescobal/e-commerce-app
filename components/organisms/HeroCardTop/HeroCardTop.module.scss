@@ -1,0 +1,204 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/buttons' as *;
+
+.wrapper {
+  position: relative;
+  text-align: center;
+  background: $color-primary;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  min-width: 20.4375rem;
+  min-height: 41.5rem;
+  overflow: hidden;
+  display: flex; // Default to a column layout on mobile
+  flex-direction: column; // Stack elements vertically on mobile
+  justify-content: center; // Center items vertically
+  align-items: center; // Center items horizontally
+
+  @include md {
+    min-width: 43.0625rem;
+    min-height: 45rem;
+  }
+
+  @include lg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // justify-content: space-between; // Separate image and content
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+  // top: 14.75rem;
+  transform: translateY(4rem);
+  padding-block: 0.5rem 0.75rem;
+  // position: relative;
+
+  // @include md {
+  //   padding-top: 1rem;
+  // }
+
+  // @include lg {
+  //   min-height: 45rem;
+  //   top: 0;
+  //   flex-direction: row; // Switch to a row layout on tablet
+  //   justify-content: space-between; // Separate image and content
+  // }
+
+  @include md {
+    transform: unset;
+  }
+
+  @include lg {
+    transform: translate(1rem, 1.5rem);
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+}
+
+.name {
+  text-align: center;
+  font-size: 2.25rem;
+  font-style: normal;
+  line-height: 2.5rem;
+  letter-spacing: 0.08038rem;
+  width: 12rem;
+
+  @include md {
+    padding-top: 4rem;
+    font-size: 3.5rem;
+    color: #fff;
+    line-height: 3.625rem;
+    letter-spacing: 0.125rem;
+    width: 19rem;
+    transform: translateY(-1rem);
+  }
+
+  @include lg {
+    transform: unset;
+    text-align: left;
+  }
+}
+
+.description {
+  padding-block: 1.5rem 2.5rem;
+  width: 17rem;
+
+  @include md {
+    width: 20rem;
+  }
+}
+
+.bgImage {
+  height: 100%;
+  width: 100%;
+  bottom: 9rem;
+  position: absolute;
+  background-image: url('/assets/images/home/desktop/pattern-circles.svg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  @include md {
+    bottom: 14rem;
+    scale: 1.375;
+    // bottom: 10rem;
+    // min-width: 100vw;
+    // background-position: bottom center;
+    background-size: cover;
+
+    @include lg {
+      background-size: contain;
+      scale: 1.4;
+      top: 13.5rem;
+      right: 11.15rem;
+      // background-position: bottom;
+    }
+
+    @include xl {
+      scale: 1.5;
+      top: 12.5rem;
+      right: 14.25rem;
+    }
+
+    @include xxl {
+      scale: 1.5;
+      top: 12rem;
+      right: 18rem;
+    }
+
+    @include breakpoint(1800px) {
+      // scale: 1.8;
+      top: 12rem;
+      right: 25rem;
+    }
+
+    // top: -20%;
+
+    // content: url('/assets/images/home/tablet/image-speaker-zx9.png');
+    // transform: translateY(-1.5rem);
+    // width: 100%;
+    // min-width: 43.0625rem;
+    // height: 45rem;
+  }
+}
+
+.image {
+  min-width: 10.765rem;
+  // max-height: 12.9375rem;
+  min-height: 12rem;
+  max-height: 100%;
+  // min-height: 10rem;
+  width: 100%;
+  // padding-block: 3.44rem 2rem;
+  // position: relative;
+  margin: 0 auto;
+  transform: translateY(-1.5rem);
+  // top: 12rem;
+  background-image: url('/assets/images/home/mobile/image-speaker-zx9.png'); // Default mobile image
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @include md {
+    // content: url('/assets/images/home/tablet/image-speaker-zx9.png');
+    background-image: url('/assets/images/home/tablet/image-speaker-zx9.png'); // Tablet image
+    // transform: translateY(-1.5rem);
+    transform: unset;
+
+    // width: 100%;
+    // top: 8rem;
+    min-width: 12.32575rem;
+    // height: 45rem;
+  }
+
+  @include lg {
+    // Desktop image
+    background-image: url('/assets/images/home/desktop/image-speaker-zx9.png'); // Desktop image
+    // margin: unset;
+    // background-position: center;
+    position: relative;
+    top: 7.75rem;
+    left: 4rem;
+    min-width: 25.63963rem;
+    min-height: 30.8125rem; // min-width: 50rem;
+    // width: 65%;
+    // height: 100%;
+    // max-height: 20rem;
+    // content: url('/assets/images/home/desktop/image-speaker-zx9.png');
+    // object-fit: contain;
+  }
+}

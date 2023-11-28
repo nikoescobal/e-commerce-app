@@ -5,7 +5,7 @@ const content = {
   description:
     'Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.',
   image: '/assets/images/home/mobile/image-speaker-zx9.png',
-  background: '/assets/images/home/desktop/pattern-circles.svg',
+  // background: '/assets/images/home/desktop/pattern-circles.svg',
   link: '/speakers/zx9',
   buttonText: 'See Product',
 };
