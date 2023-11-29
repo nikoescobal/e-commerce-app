@@ -20,9 +20,9 @@ const HeroCardTop = () => {
           variant="h2"
           color="light"
           fontWeight="bold"
-          className={styles.name}
+          className={styles.title}
         >
-          {content.name}
+          {content.title}
         </Typography>
         {content.description && (
           <Typography

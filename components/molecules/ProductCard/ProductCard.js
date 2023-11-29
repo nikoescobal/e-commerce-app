@@ -78,7 +78,7 @@ const ProductCard = ({ product, type }) => {
       </div>
       <div className={styles.content}>
         <Typography variant="h2" color="light">
-          {product.name}
+          {product.title}
         </Typography>
         {product.description && (
           <Typography variant="body" color="light">

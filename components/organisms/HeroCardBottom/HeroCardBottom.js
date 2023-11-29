@@ -16,7 +16,7 @@ const HeroCardBottom = () => {
           fontWeight="bold"
           className={styles.description}
         >
-          {content.name}
+          {content.title}
         </Typography>
 
         <Button variant="outline">{content.buttonText}</Button>

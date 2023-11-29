@@ -6,6 +6,7 @@ import products from './content';
 import HeroCardTop from '../HeroCardTop/HeroCardTop';
 import HeroCardMid from '../HeroCardMid/HeroCardMid';
 import HeroCardBottom from '../HeroCardBottom/HeroCardBottom';
+import AboutUsMini from '../AboutUsMini/AboutUsMini';
 
 const FeaturedProducts = () => {
   return (
@@ -22,6 +23,7 @@ const FeaturedProducts = () => {
       <HeroCardTop />
       <HeroCardMid />
       <HeroCardBottom />
+      <AboutUsMini />
     </section>
   );
 };
