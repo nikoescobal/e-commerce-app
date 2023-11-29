@@ -23,7 +23,6 @@ const FeaturedProducts = () => {
       <HeroCardTop />
       <HeroCardMid />
       <HeroCardBottom />
-      <AboutUsMini />
     </section>
   );
 };

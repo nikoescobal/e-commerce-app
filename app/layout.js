@@ -1,5 +1,7 @@
 import './globals.css';
 import Header from '../components/organisms/Header/Header';
+import Footer from '../components/organisms/Footer/Footer';
+import AboutUsMini from '../components/organisms/AboutUsMini/AboutUsMini';
 // import styles from '../components/organisms/Header/Header.module.scss';
 
 export const metadata = {
@@ -13,6 +15,8 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <AboutUsMini />
+        <Footer />
       </body>
     </html>
   );

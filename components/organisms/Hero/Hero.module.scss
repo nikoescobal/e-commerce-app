@@ -156,6 +156,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: translateY(2rem);
 
   @include md {
     max-width: 23.6875rem;
