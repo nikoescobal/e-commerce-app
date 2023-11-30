@@ -9,6 +9,22 @@ const content = {
     { label: 'Earphones', path: '/earphones' },
   ],
   copyright: 'Copyright 2021. All Rights Reserved',
-  socialMedia: ['facebook', 'twitter', 'instagram'],
+  socialMediaLinks: [
+    {
+      name: 'Twitter',
+      icon: '/assets/icons/icon-twitter.svg',
+      url: 'https://twitter.com',
+    },
+    {
+      name: 'Instagram',
+      icon: '/assets/icons/icon-instagram.svg',
+      url: 'https://instagram.com',
+    },
+    {
+      name: 'Facebook',
+      icon: '/assets/icons/icon-facebook.svg',
+      url: 'https://facebook.com',
+    },
+  ],
 };
 export default content;
