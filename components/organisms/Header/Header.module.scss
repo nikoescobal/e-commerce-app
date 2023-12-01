@@ -10,6 +10,7 @@
 }
 
 .nav {
+  font-family: $font-family;
   display: flex;
   justify-content: space-between;
   padding: 2rem 1.5rem;
@@ -60,14 +61,78 @@
   // styles for logo
 }
 
-.nav {
-  // styles for nav
+.navList {
+  font-family: $font-family;
+  display: none;
+  color: $text-color-light;
+
+  @include lg {
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5625rem; /* 192.308% */
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    order: 1;
+    display: flex;
+    gap: 2rem;
+    // text-decoration: none;
+    list-style-type: none;
+  }
+}
+
+.navItem {
+  &:hover {
+    color: $color-primary;
+  }
 }
 
 .cartIcon {
-  // styles for cart icon
+  order: 2;
 }
 
 .menuIcon {
+  @include lg {
+    display: none;
+  }
   // background-color: red;
+}
+
+// .dropdownMenu {
+//   position: absolute;
+//   top: 100%; // position right below the nav bar
+//   left: 0;
+//   width: 100%;
+//   background-color: $color-light; // adjust the color based on your design
+//   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); // for dropdown shadow
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 2rem;
+//   z-index: 10; // above other items
+// }
+
+.dropdownMenu {
+  display: none; // By default, the dropdown is not displayed
+  background-color: $background-color-dark;
+  height: 100vh;
+  // Styles for the dropdown when it's supposed to be visible
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; // Adjust as necessary
+  left: 0;
+  right: 0;
+  // background-color: $color-background; // Assuming you have a color variable set
+  // Any other styles...
+}
+
+// The rest of the burger menu styles...
+
+// This ensures that the burger icon and dropdown are not displayed on medium screens and up
+@include md {
+  .menuIcon,
+  .dropdownMenu {
+    display: none;
+  }
 }

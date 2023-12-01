@@ -1,51 +1,38 @@
 // components/Header/Header.js
+'use client';
+
+import React, { useState } from 'react';
 import styles from './Header.module.scss';
-import classnames from 'classnames';
 import Image from '../../atoms/Image/Image';
+import content from './content';
+import Link from 'next/link';
+import ProductCategories from '../ProductCategories/ProductCategories';
+import ClientHeader from './ClientHeader.client';
 
-const Header = ({ isBorderVisible }) => {
-  // List of navigation items, this could also come from a prop or state
-  const navItems = ['Headphones', 'Speakers', 'Earphones'];
-
+const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        {/* Hamburger Icon */}
-        <div className={styles.menuIcon}>
-          <Image
-            src="/assets/icons/icon-hamburger.svg"
-            alt="Menu Icon"
-            width={24}
-            height={24}
-          />
-        </div>
+        {/* Client-Side Interactive Header */}
+        <ClientHeader />
 
         {/* Logo */}
         <div className={styles.logo}>
           <Image
-            src="/assets/icons/logo.svg"
-            alt="Logo"
-            width={143}
-            height={25}
+            src={content.logo.src}
+            alt={content.logo.alt}
+            width={content.logo.width}
+            height={content.logo.height}
           />
         </div>
-
-        {/* Navigation Links */}
-        {/* <ul className={styles.navList}>
-          {navItems.map((item, index) => (
-            <li key={index} className={styles.navItem}>
-              {item}
-            </li>
-          ))}
-        </ul> */}
 
         {/* Cart Icon */}
         <div className={styles.cartIcon}>
           <Image
-            src="/assets/icons/icon-cart.svg"
-            alt="Cart Icon"
-            width={24}
-            height={24}
+            src={content.cartIcon.src}
+            alt={content.cartIcon.alt}
+            width={content.cartIcon.width}
+            height={content.cartIcon.height}
           />
         </div>
       </nav>
