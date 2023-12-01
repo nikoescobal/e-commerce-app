@@ -108,7 +108,9 @@
     display: inline-block; // Ensures the link area is only around the icon
 
     &:hover {
-      filter: brightness(0.8); // Darkens the icon on hover for a simple effect
+      // filter: brightness(0.8); // Darkens the icon on hover for a simple effect
+      filter: invert(57%) sepia(75%) saturate(525%) hue-rotate(330deg)
+        brightness(92%) contrast(83%);
       // background-color: red;
       // Or you can use any other filter effect like hue-rotate if you want a color change
     }

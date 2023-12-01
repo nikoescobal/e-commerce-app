@@ -11,9 +11,9 @@ const content = {
   copyright: 'Copyright 2021. All Rights Reserved',
   socialMediaLinks: [
     {
-      name: 'Twitter',
-      icon: '/assets/icons/icon-twitter.svg',
-      url: 'https://twitter.com',
+      name: 'Facebook',
+      icon: '/assets/icons/icon-facebook.svg',
+      url: 'https://facebook.com',
     },
     {
       name: 'Instagram',
@@ -21,9 +21,9 @@ const content = {
       url: 'https://instagram.com',
     },
     {
-      name: 'Facebook',
-      icon: '/assets/icons/icon-facebook.svg',
-      url: 'https://facebook.com',
+      name: 'Twitter',
+      icon: '/assets/icons/icon-twitter.svg',
+      url: 'https://twitter.com',
     },
   ],
 };
