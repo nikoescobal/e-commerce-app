@@ -1,5 +1,6 @@
 // components/ButtonWithIcon/ButtonWithIcon.js
 import React from 'react';
+import Link from 'next/link';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Image from '../Image/Image';
@@ -17,9 +18,11 @@ const ButtonWithIcon = ({
   iconAlt,
   iconWidth,
   iconHeight,
+  href, // Add href prop for routing
   ...props
 }) => {
-  return (
+  // If href is provided, wrap Button in a Link component
+  const buttonMarkup = (
     <Button
       type={type}
       className={className}
@@ -40,6 +43,14 @@ const ButtonWithIcon = ({
         />
       )}
     </Button>
+  );
+
+  return href ? (
+    <Link href={href} passHref>
+      {buttonMarkup}
+    </Link>
+  ) : (
+    buttonMarkup
   );
 };
 
