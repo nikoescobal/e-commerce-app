@@ -2,9 +2,9 @@
 const content = {
   navItems: [
     { label: 'Home', path: '/' },
-    { label: 'Headphones', path: '/headphones' },
-    { label: 'Speakers', path: '/speakers' },
-    { label: 'Earphones', path: '/earphones' },
+    { label: 'Headphones', path: '/products/headphones' },
+    { label: 'Speakers', path: '/products/speakers' },
+    { label: 'Earphones', path: '/products/earphones' },
   ],
   logo: {
     src: '/assets/icons/logo.svg',

@@ -1,21 +1,41 @@
 // content/content.js
-const content = [
-  {
-    title: 'Headphones',
-    imageUrl: '/assets/shared/mobile/headphones.svg',
-    slug: 'headphones',
+const content = {
+  categories: [
+    {
+      title: 'Headphones',
+      imageUrl: '/assets/shared/mobile/headphones.svg',
+      slug: 'headphones',
+    },
+    {
+      title: 'Speakers',
+      imageUrl: '/assets/shared/mobile/speakers.svg',
+      slug: 'speakers',
+    },
+    {
+      title: 'Earphones',
+      imageUrl: '/assets/shared/mobile/earphones.svg',
+      slug: 'earphones',
+    },
+  ],
+  logo: {
+    src: '/assets/icons/logo.svg',
+    alt: 'Logo',
+    width: 143,
+    height: 25,
   },
-  {
-    title: 'Speakers',
-    imageUrl: '/assets/shared/mobile/speakers.svg',
-    slug: 'speakers',
+  menuIcon: {
+    src: '/assets/icons/icon-hamburger.svg',
+    alt: 'Menu Icon',
+    width: 24,
+    height: 24,
   },
-  {
-    title: 'Earphones',
-    imageUrl: '/assets/shared/mobile/earphones.svg',
-    slug: 'earphones',
+  cartIcon: {
+    src: '/assets/icons/icon-cart.svg',
+    alt: 'Cart Icon',
+    width: 24,
+    height: 24,
   },
-  // Add more categories as needed
-];
+  // Add additional content as needed
+};
 
 export default content;

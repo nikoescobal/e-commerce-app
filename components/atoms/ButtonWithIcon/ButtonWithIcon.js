@@ -9,7 +9,7 @@ import styles from './ButtonWithIcon.module.scss';
 const ButtonWithIcon = ({
   children,
   className,
-  onClick,
+  href = '', // Add href prop for navigation
   ariaLabel,
   type = 'button',
   variant = 'primary',
@@ -18,39 +18,32 @@ const ButtonWithIcon = ({
   iconAlt,
   iconWidth,
   iconHeight,
-  href, // Add href prop for routing
   ...props
 }) => {
-  // If href is provided, wrap Button in a Link component
-  const buttonMarkup = (
-    <Button
-      type={type}
-      className={className}
-      onClick={onClick}
-      aria-label={ariaLabel}
-      variant={variant}
-      disabled={disabled}
-      {...props}
-    >
-      <span className={styles.text}>{children}</span>
-      {iconSrc && (
-        <Image
-          src={iconSrc}
-          alt={iconAlt}
-          width={iconWidth}
-          height={iconHeight}
-          className={styles.icon}
-        />
-      )}
-    </Button>
-  );
-
-  return href ? (
+  return (
     <Link href={href} passHref>
-      {buttonMarkup}
+      {/* Add Link component for navigation */}
+      <Button
+        as="a" // Render Button as an anchor tag
+        type={type}
+        className={className}
+        aria-label={ariaLabel}
+        variant={variant}
+        disabled={disabled}
+        {...props}
+      >
+        <span className={styles.text}>{children}</span>
+        {iconSrc && (
+          <Image
+            src={iconSrc}
+            alt={iconAlt}
+            width={iconWidth}
+            height={iconHeight}
+            className={styles.icon}
+          />
+        )}
+      </Button>
     </Link>
-  ) : (
-    buttonMarkup
   );
 };
 

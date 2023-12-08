@@ -4,6 +4,8 @@
 @use '../../../styles/mixins' as *;
 
 .wrapper {
+  // z-index: 4;
+  width: 100%;
   //   display: flex;
   //   flex-direction: column;
   display: grid;

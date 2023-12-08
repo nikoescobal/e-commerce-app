@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
       <div className={styles.content}>
         <Typography
-          color="text-color-light"
+          color="light"
           textAlign="center"
           variant="overline"
           className={styles.title}
@@ -32,7 +32,7 @@ const Hero = () => {
           New Product
         </Typography>
         <Typography
-          color="text-color-light"
+          color="light"
           textAlign="center"
           variant="h3"
           fontWeight="bold"
@@ -41,7 +41,7 @@ const Hero = () => {
           XX99 Mark II Headphones
         </Typography>
         <Typography
-          color="text-color-light"
+          color="light"
           textAlign="center"
           variant="body"
           fontWeight="medium"

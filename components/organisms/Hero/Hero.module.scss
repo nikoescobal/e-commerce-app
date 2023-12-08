@@ -4,6 +4,7 @@
 @use '../../../styles/mixins' as *;
 
 .hero {
+  z-index: 0;
   // position: relative;
   @include section-padding;
   min-height: 37.5rem; // Adjust to match the design height for the hero section
