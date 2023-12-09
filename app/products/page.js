@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCategories from '../../components/organisms/ProductCategories/ProductCategories';
 
-const Products = () => {
+const ProductPage = () => {
   return (
     <div>
       <ProductCategories />
@@ -9,4 +9,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ProductPage;
