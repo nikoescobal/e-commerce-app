@@ -17,7 +17,9 @@ const Hero = () => {
           className={styles.heroImage}
           // layout="responsive"
           priority
-          fill
+          // fill
+          width={90}
+          height={90}
           objectFit="cover"
           objectPosition="50% 75%"
         />

@@ -1,6 +1,6 @@
-@use '../../styles/breakpoints' as *;
-@use '../../styles/colors' as *;
-@use '../../styles/mixins' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/mixins' as *;
 
 .wrapper {
   background-color: $color-light;
