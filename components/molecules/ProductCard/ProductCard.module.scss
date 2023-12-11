@@ -10,9 +10,12 @@
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
+  width: 100%;
 
   @include lg {
     flex-direction: row;
+    padding: 5rem 10rem;
+    gap: 6rem;
     // grid-template-columns: repeat(2, 1fr);
 
     &:nth-child(even) {
@@ -24,13 +27,21 @@
 .content {
   display: grid;
   gap: 1.5rem;
+  min-width: 10rem;
+  flex: 1;
+
+  @include lg {
+    padding: 0 3rem;
+  }
 }
 
 .categoryImage {
-  width: 100%;
+  // width: 100%;
+  margin: 0 auto;
 
   @include lg {
-    // max-width: 33.75rem;
+    max-width: 33.75rem;
+    min-width: 50%;
   }
 }
 
@@ -121,10 +132,13 @@
 
   @include md {
     max-width: 23.6875rem;
+    margin-bottom: unset;
+
     // padding: 2rem 1rem;
   }
 
   @include lg {
+    min-width: 50%;
     text-align: left;
     align-items: flex-start;
   }
@@ -134,10 +148,14 @@
   width: 100%;
 
   // margin: 0 auto;
-  max-width: 40rem;
+  // max-width: 40rem;
   margin: 0 auto;
   // position: absolute;
   // top: 30rem;
+
+  @include lg {
+    max-width: 33rem;
+  }
 }
 
 // .imageWrapper img {
@@ -153,4 +171,8 @@
 
 .button {
   margin: 0 auto;
+
+  @include lg {
+    margin: unset;
+  }
 }

@@ -17,6 +17,7 @@ const ProductCard = ({ item }) => {
           className={styles.heroImage}
         />
       </picture>
+
       <div className={styles.content}>
         {item.newProduct && (
           <Typography

@@ -5,15 +5,10 @@
 .wrapper {
   background-color: $color-light;
   text-align: center;
-  // display: grid;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
   gap: 1.5rem;
-  align-items: center;
   // padding: 2rem;
-  margin-top: 4rem;
+  margin-top: 10rem;
 }
 
 .category {
