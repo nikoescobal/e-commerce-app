@@ -7,7 +7,7 @@ const ProductList = ({ items }) => {
   return (
     <section className={styles.wrapper}>
       {items.map((item) => (
-        <ProductCard key={item.slug} item={item} />
+        <ProductCard hasSeeProduct key={item.slug} item={item} />
       ))}
     </section>
   );
