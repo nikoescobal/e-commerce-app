@@ -14,7 +14,7 @@ import ProductList from '../../../components/organisms/ProductList/ProductList';
 
 const CategoryPage = () => {
   const pathname = usePathname();
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [category, setCategory] = useState(null);
 
   useEffect(() => {
     const categorySlug = pathname.split('/').pop();
@@ -27,14 +27,14 @@ const CategoryPage = () => {
       cat.slug.endsWith(categorySlug)
     );
 
-    setActiveCategory(foundCategory);
+    setCategory(foundCategory);
   }, [pathname]);
 
-  if (!activeCategory) {
+  if (!category) {
     return <div>Loading...</div>;
   }
   // Adding Loading and Error State warnings
-  // change useState of activeCategory to empty object
+  // change useState of category to empty object
   // add logic to check if object is empty. If empty, show loading
   // if undefined, show error warning saying it doesn't exist or page doesn't exist
 
@@ -46,10 +46,10 @@ const CategoryPage = () => {
         color="light"
         className={styles.category}
       >
-        {activeCategory.title}
+        {category.title}
       </Typography>
 
-      <ProductList items={activeCategory.items} />
+      <ProductList items={category.items} />
     </section>
   );
 };
