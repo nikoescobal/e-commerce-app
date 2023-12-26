@@ -1,3 +1,71 @@
+@use '../../../../styles/breakpoints' as *;
+@use '../../../../styles/mixins' as *;
+@use '../../../../styles/colors' as *;
+
 .wrapper {
-  background-color: red;
+  // background-color: red;
+  color: black;
+}
+
+.back {
+  text-decoration: none !important;
+  text-transform: capitalize !important;
+  background-color: transparent !important;
+  opacity: 0.5 !important;
+  color: $text-color-dark !important;
+  padding: 0 !important;
+}
+
+.cartWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  // background-color: red;
+}
+
+.cartTop {
+  display: flex;
+  gap: 2rem;
+}
+
+.cartItem {
+  display: flex;
+}
+
+.cartInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.addtoCart {
+  display: flex;
+}
+
+.operatorButton {
+  padding: 1.1rem;
+  border-radius: 0;
+  border: none;
+  opacity: 0.25;
+  color: black;
+  background: #f1f1f1;
+  width: 1rem;
+}
+
+.counterWrapper {
+  display: flex;
+  // border: 1px solid black;
+  background: #f1f1f1;
+}
+
+.counter {
+  padding: 1rem;
+  // background-color: white;
+  background: #f1f1f1;
+  color: black;
+  width: 4rem;
+  text-align: center;
+  // border-radius: 0;
 }
