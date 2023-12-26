@@ -24,6 +24,12 @@
   }
 }
 
+.detailed {
+  @include lg {
+    flex-direction: row !important;
+  }
+}
+
 .content {
   display: grid;
   gap: 1.5rem;
@@ -175,4 +181,39 @@
   @include lg {
     margin: unset;
   }
+}
+
+.addToCartWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.addtoCart {
+  display: flex;
+}
+
+.operatorButton {
+  padding: 1.1rem;
+  border-radius: 0;
+  border: none;
+  opacity: 0.25;
+  color: black;
+  background: #f1f1f1;
+  width: 1rem;
+}
+
+.counterWrapper {
+  display: flex;
+  // border: 1px solid black;
+  background: #f1f1f1;
+}
+
+.counter {
+  padding: 1rem;
+  // background-color: white;
+  background: #f1f1f1;
+  color: black;
+  width: 4rem;
+  text-align: center;
+  // border-radius: 0;
 }
