@@ -82,3 +82,7 @@ function Stopwatch() {
 }
 
 export default Stopwatch;
+
+// https://medium.com/@samho1996/react-shopping-cart-with-custom-hooks-867a1338d39c
+// https://www.geeksforgeeks.org/how-to-create-shopping-cart-button-in-reactjs/
+// https://dev.to/anne46/cart-functionality-in-react-with-context-api-2k2f
