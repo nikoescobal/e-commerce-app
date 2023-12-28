@@ -5,7 +5,7 @@ import { Manrope } from 'next/font/google';
 import Header from '../components/organisms/Header/Header';
 import Footer from '../components/organisms/Footer/Footer';
 import AboutUsMini from '../components/organisms/AboutUsMini/AboutUsMini';
-import { CartProvider } from '../components/cartContext';
+import { CartProvider } from '../context/CartContext';
 // import styles from '../components/organisms/Header/Header.module.scss';
 
 const manrope = Manrope({ subsets: ['latin'] });

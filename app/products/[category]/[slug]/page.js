@@ -16,7 +16,7 @@ import ProductList from '../../../../components/organisms/ProductList/ProductLis
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Modal from '../../../../components/molecules/Modal/Modal';
-import { CartContext } from '../../../../components/cartContext';
+import { CartContext } from '../../../../context/CartContext';
 
 const ProductDetailsPage = ({ params }) => {
   const { addToCart } = useContext(CartContext);
