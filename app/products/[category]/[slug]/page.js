@@ -19,7 +19,7 @@ import Modal from '../../../../components/molecules/Modal/Modal';
 import { CartContext } from '../../../../context/CartContext';
 
 const ProductDetailsPage = ({ params }) => {
-  const { addToCart } = useContext(CartContext);
+  // const { addToCart } = useContext(CartContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -94,7 +94,7 @@ const ProductDetailsPage = ({ params }) => {
             isDetailedView
             item={product}
             toggleModal={toggleModal}
-            addToCart={addToCart}
+            // addToCart={addToCart}
           />
 
           {/* <div className={styles.cartWrapper}>

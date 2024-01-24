@@ -9,7 +9,7 @@ import Button from '../../atoms/Button/Button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
-import Dialog from '../Dialog/Dialog';
+// import Dialog from '../Dialog/Dialog';
 
 const ProductCard = ({
   item,
@@ -39,14 +39,6 @@ const ProductCard = ({
   const pathname = usePathname();
   return (
     <div className={cardClass}>
-      <Dialog title="Example Modal" onClose={onClose} onOk={onOk}>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
-          tenetur ratione vitae molestiae accusamus, nesciunt consectetur ea
-          corporis quo placeat deserunt hic, eos repudiandae veniam labore
-          libero, sint nemo voluptatibus.
-        </p>
-      </Dialog>
       <picture className={styles.categoryImage}>
         <source media="(min-width: 1024px)" srcSet={item.imageUrl.desktop} />
         <source media="(min-width: 768px)" srcSet={item.imageUrl.tablet} />

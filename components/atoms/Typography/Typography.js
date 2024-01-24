@@ -26,7 +26,7 @@ const Typography = ({
     className
   );
 
-  console.log('classes:', classNames);
+  // console.log('classes:', classNames);
 
   return (
     <Tag className={classNames} {...props}>
